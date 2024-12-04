@@ -463,6 +463,26 @@ Slider
     background-size: cover;
   }
   
+  .tituloseccionslider {
+    position: relative;
+    height: 1160px; /* Ajusta la altura según tus necesidades */
+  }
+  
+  h1 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    font-family: "Exo", sans-serif;
+    font-size: 18pt;
+    font-weight: 350;
+    letter-spacing: 2.9px;
+    text-align: center;
+    user-select: none;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 1px #343434, 2px 2px 5px #1e1e1e
+  }
   /*==========             
   Scrollbar
   ==========*/

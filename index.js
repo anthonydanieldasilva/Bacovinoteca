@@ -182,7 +182,7 @@ var carousel = (function () {
   function init() {
     startInterval = window.setInterval(function () {
       slide(slide_index + 1);
-    }, 2100);
+    }, 2000);
   }
 
   function pauseSlider() {
