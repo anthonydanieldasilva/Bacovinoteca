@@ -102,7 +102,7 @@ nav .logo {
 }
 
 nav .logo img {
-    height: 65px;
+    height: 70px;
     width: auto;
     margin-right: 20px;
 }
@@ -307,7 +307,7 @@ nav ul li a:hover {
 
 /* final  navbar */
 
-
+/* slogan */
 body {
     margin: 0px;
 }
@@ -335,9 +335,9 @@ body {
 /* final  slogan */
 
 
-/*==========             
+/*          
 Slider
-==========*/
+*/
 
 .slider {
     width: 100%;
