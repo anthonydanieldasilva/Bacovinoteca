@@ -46,12 +46,14 @@
 /*final loader*/
 
 * {
+    
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 body {
+
     background: #F8F8F8;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -332,174 +334,78 @@ body {
     user-select: none;
 }
 
-/* final  slogan */
+/* FINAL slogan */
 
-
-/*          
-Slider
-*/
-
-.slider {
-    width: 100%;
-    overflow: hidden;
-    height: 700px;
-    position: absolute;
-  }
-  
-  .slider ul:first-child {
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
-    position: absolute;
-    width: 300%;
-    height: 100%;
-    top: 0;
-  }
-  
-  .slider li {
-    padding: 0;
-    margin: 0;
-    width: 33.333333%;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-  }
-  
-  .slider li img {
-    border: none;
-    width: 100%;
-    min-height: 100%;
-  }
-  
-  .slider button {
-    position: absolute;
-    display: block;
     box-sizing: border-box;
-    border: none;
-    outline: none;
-    top: 0;
-    bottom: 0;
-    width: 12%;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    opacity: 0;
-    z-index: 2;
+    font-family: "Exo", sans-serif;
+}
+.slider {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  margin: auto;
+
+  .slide {
+    display: none;
+    height: 100%;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      filter: contrast(90%);
+      object-fit: cover;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 22px;
+      color: #fff;
+      padding: 8px 16px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 4px;
+    }
   }
-  
-  .slider button.prev {
-    left: 0;
-  }
-  .slider button.next {
-    right: 0;
-  }
-  .slider button img {
-    width: 28px;
-    height: 28px;
-  }
-  .slider button:hover,
-  .slider button:active {
+
+  a.prev,
+  a.next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
     cursor: pointer;
+    user-select: none;
+    color: #ffffff;
+    padding: 12px;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 3px;
+    }
+  }
+  .next {
+    right: 20px;
+  }
+  .prev {
+    left: 20px;
+  }
+}
+
+.show {
+  animation: fade 0.5s ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
     opacity: 1;
   }
-  
-  .slider .content {
-    z-index: 3;
-    position: absolute;
-    bottom: 100px;
-    left: 0;
-    right: 0;
-    height: 3em;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #fff;
-    text-align: center;
-    line-height: 3em;
-    font-size: 1.5em;
-  }
-  
-  .slider .content a {
-    color: inherit;
-  }
-  
-  .nav-dots {
-    display: block;
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 50px;
-    width: 250px;
-    z-index: 110;
-    text-align: center;
-  }
-  
-  .nav-dots li {
-    position: relative;
-    top: 40%;
-    height: 5px;
-    width: 10%;
-    background: rgba(245, 245, 245, 0.5);
-    border-radius: 3px;
-    display: inline-block;
-    margin: 5px;
-  }
-  .nav-dots .active,
-  .nav-dots li:hover {
-    cursor: pointer;
-    background: rgba(245, 245, 245, 1);
-  }
-  
-  .wrap {
-    width: 100%;
-    height: auto;
-    padding: 0 6%;
-    background: rgb(246, 246, 246);
-    background-size: cover;
-  }
-  
-  .tituloseccionslider {
-    position: relative;
-    height: 1160px; /* Ajusta la altura según tus necesidades */
-  }
-  
-  h1 {
-    position: absolute;
-    width: 100%;
-    display: inline-block;
-    font-family: "Exo", sans-serif;
-    font-size: 18pt;
-    font-weight: 350;
-    letter-spacing: 2.9px;
-    text-align: center;
-    user-select: none;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 1px 1px 1px #343434, 2px 2px 5px #1e1e1e
-  }
-  /*==========             
-  Scrollbar
-  ==========*/
-  
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background: rgb(219, 219, 219);
-  }
-
-/*==========             
-final slider
-==========*/
+}
