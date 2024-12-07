@@ -33,7 +33,7 @@ const texts = [
 ];
 
 const morphTime = 1;
-const cooldownTime = 0.35;
+const cooldownTime = 0.60;
 
 let textIndex = texts.length - 1;
 let time = new Date();
@@ -84,7 +84,7 @@ function animate() {
 
   let newTime = new Date();
   let shouldIncrementIndex = cooldown > 0;
-  let dt = (newTime - time) / 895;
+  let dt = (newTime - time) / 1000;
   time = newTime;
 
   cooldown -= dt;
@@ -103,7 +103,7 @@ function animate() {
 animate();
 
 
-/* slider*/
+/* slider1*/
 
 const images = document.querySelectorAll(".slide"),
   next = document.querySelector(".next"),
@@ -151,4 +151,55 @@ prev.addEventListener("click", function() {
 
 setInterval(() => {
   next.click();
-}, 2000);
+}, 6000);
+
+
+/* slider2*/
+
+const images2 = document.querySelectorAll(".slide2"),
+  next2 = document.querySelector(".next2"),
+  prev2 = document.querySelector(".prev2");
+
+let current2 = 0;
+
+function changeImage2() {
+  images2.forEach(img => {
+    img.classList.remove("show");
+    img.style.display = "none";
+  });
+
+  images2[current2].classList.add("show");
+  images2[current2].style.display = "block";
+}
+
+// Calling first time
+changeImage2();
+
+next2.addEventListener("click", function() {
+  current2++;
+
+  if (current2 > images2.length - 1) {
+    current2 = 0;
+  } else if (current2 < 0) {
+    current2 = images2.length - 1;
+  }
+
+  changeImage2();
+});
+prev2.addEventListener("click", function() {
+  current2--;
+
+  if (current2 > images2.length - 1) {
+    current2 = 0;
+  } else if (current2 < 0) {
+    current2 = images2.length - 1;
+  }
+
+  changeImage2();
+});
+
+// Auto change in 5 seconds
+
+setInterval(() => {
+  next2.click();
+}, 6000);
