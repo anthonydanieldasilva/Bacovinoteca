@@ -498,7 +498,6 @@ body {
 
 /*  div logo separador */
 .logo-container {
-    filter: url(#threshold) blur(0.8px);
     padding: 18px 18px 18px 18px;
     text-align: center;   
 }
