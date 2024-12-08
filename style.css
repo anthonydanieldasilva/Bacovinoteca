@@ -459,7 +459,7 @@ body {
     a.next2 {
         position: absolute;
         top: 50%;
-        font-size: 30px;
+        font-size: 40px;
         cursor: pointer;
         user-select: none;
         color: #ffffff;
