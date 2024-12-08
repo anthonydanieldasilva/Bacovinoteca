@@ -147,11 +147,11 @@ prev.addEventListener("click", function() {
   changeImage();
 });
 
-// Auto change in 5 seconds
+// Auto change in 5 seconds, out of design at moment
 
-setInterval(() => {
-  next.click();
-}, 6000);
+//setInterval(() => {
+//next.click();
+//}, 6000);
 
 
 /* slider2*/
@@ -200,6 +200,57 @@ prev2.addEventListener("click", function() {
 
 // Auto change in 5 seconds
 
-setInterval(() => {
-  next2.click();
-}, 6000);
+//setInterval(() => {
+//next2.click();
+//}, 6000);
+
+
+/* slider3*/
+
+const images3 = document.querySelectorAll(".slide3"),
+  next3 = document.querySelector(".next3"),
+  prev3 = document.querySelector(".prev3");
+
+let current3 = 0;
+
+function changeImage3() {
+  images3.forEach(img => {
+    img.classList.remove("show");
+    img.style.display = "none";
+  });
+
+  images3[current3].classList.add("show");
+  images3[current3].style.display = "block";
+}
+
+// Calling first time
+changeImage3();
+
+next3.addEventListener("click", function() {
+  current3++;
+
+  if (current3 > images3.length - 1) {
+    current3 = 0;
+  } else if (current3 < 0) {
+    current3 = images3.length - 1;
+  }
+
+  changeImage3();
+});
+prev3.addEventListener("click", function() {
+  current3--;
+
+  if (current3 > images3.length - 1) {
+    current3 = 0;
+  } else if (current3 < 0) {
+    current3 = images3.length - 1;
+  }
+
+  changeImage3();
+});
+
+// Auto change in 5 seconds
+
+//setInterval(() => {
+//next2.click();
+//}, 6000);
