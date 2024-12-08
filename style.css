@@ -319,7 +319,7 @@ body {
     padding-top: 60px;
     margin: 18em auto;
     width: 100vw;
-    filter: url(#threshold) blur(0.1px);
+    filter: url(#threshold) blur(0.3px);
 }
 
 #text1,
@@ -383,7 +383,7 @@ body {
     a.next {
         position: absolute;
         top: 50%;
-        font-size: 30px;
+        font-size: 40px;
         cursor: pointer;
         user-select: none;
         color: #ffffff;
@@ -392,7 +392,7 @@ body {
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.4);
-            border-radius: 3px;
+            border-radius: 12px;
         }
     }
 
