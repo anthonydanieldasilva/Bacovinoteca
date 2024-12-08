@@ -498,8 +498,18 @@ body {
 
 /*  div logo separador */
 .logo-container {
-    padding: 18px 18px 18px 18px;
-    text-align: center;   
+    padding: 19px 19px 19px 19px;
+    text-align: center;
+    
+}
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .logo {
+        width: 11%;
+    }
 }
 
 /*  div logo separador */
