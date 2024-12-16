@@ -254,3 +254,18 @@ prev3.addEventListener("click", function() {
 //setInterval(() => {
 //next2.click();
 //}, 6000);
+
+function initMap() {
+  // Crear el mapa
+  var map = umap.createMap('mapa');
+
+  // Definir la ubicación de tu tienda (reemplaza con tus coordenadas)
+  var latitud = -55.103946;
+  var longitud = -55.103946;
+
+  // Crear un marcador
+  var marker = umap.createMarker([latitud, longitud], map);
+}
+
+// Llamar a la función de inicialización
+initMap();
