@@ -594,7 +594,7 @@ body {
     padding-top: 50px;
     width: 100%;
     height: 850px;
-    border: 1px solid #ccc;
+    
 }
 .logogps-container {
     padding: 19px 19px 50px 19px;
@@ -606,4 +606,35 @@ body {
     height: 550px;;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.6);
+}
+/*  maps stiles */
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: none; /* Inicialmente oculto */
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+}
+
+/*  maps stiles */
+
+.fachada {
+    text-align: center;
+    padding: 5px;
+}
+
+.fachada img {
+    max-width: 85%; /* Ajusta el ancho máximo de la imagen */
+    border-radius: 10px; /* Agrega bordes redondeados */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
 }

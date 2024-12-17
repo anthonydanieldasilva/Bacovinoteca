@@ -25,6 +25,7 @@
           "-webkit-overflow-scrolling"
         ]
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }
