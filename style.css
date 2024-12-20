@@ -638,3 +638,12 @@ body {
     border-radius: 10px; /* Agrega bordes redondeados */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
 }
+
+.contactoparapedidos {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #000000;
+    padding: 12px 12px 15px 15px;
+    background-color: rgba(131, 129, 129, 0.105);
+    border-radius: 10px;
+}
