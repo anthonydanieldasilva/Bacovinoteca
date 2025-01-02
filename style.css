@@ -631,15 +631,13 @@ body {
 }
 
 
-.container {
+
+.contactodirectocontainer {
     display: flex;
     justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    height: 25px;
-    padding: 25px 25px 60px 25px;
+    align-items: flex-end;
+    padding-bottom: 50px;
 }
-
 .whatsapp-icon {
     
     width: 50px;
